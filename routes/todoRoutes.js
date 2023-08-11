@@ -21,7 +21,7 @@ router
 // for update and delete list
 router
   .route("/:listId")
-  .patch(validate(validateTodo, {}, {}), updateList)
+  .put(validate(validateTodo, {}, {}), updateList)
   .delete(deleteList);
 
 module.exports = router;
